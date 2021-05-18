@@ -1,11 +1,16 @@
 body {
-  width: 100%;
-  min-height: 100vh;
+  // width: 100%;
+  // min-height: 100vh;
   background-color: $bg-color;
   color: white;
 }
 .container {
-  width: 100%;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 9;
+  overflow-y: scroll;
 }
 
 .main {
@@ -21,7 +26,7 @@ body {
 .intro {
   margin-top: 15vh;
   width: fit-content;
-  .text {
+  .intro-text {
     span {
       display: block;
       font-family: 'Poppins', Arial, Helvetica, sans-serif;

@@ -1,0 +1,39 @@
+.welcome-container {
+  height: calc(1000px + 100vh);
+  position: relative;
+  top: 0;
+  bottom: 0;
+  z-index: 11;
+  background-color: white;
+}
+.main-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.welcome {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+}
+.box {
+  height: 50%;
+  overflow: hidden;
+  background-color: white;
+}
+.welcome-text {
+  font-size: clamp(50px, 15vw, 150px);
+  text-transform: uppercase;
+  text-align: center;
+  color: black;
+}
+.top-text {
+  position: relative;
+  top: 100%;
+  transform: translate(0, -50%);
+}
+.bottom-text {
+  transform: translate(0, -50%);
+}

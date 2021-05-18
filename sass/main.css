@@ -74,14 +74,17 @@ span {
 }
 
 body {
-  width: 100%;
-  min-height: 100vh;
   background-color: black;
   color: white;
 }
 
 .container {
-  width: 100%;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 9;
+  overflow-y: scroll;
 }
 
 .main {
@@ -106,7 +109,7 @@ body {
   width: fit-content;
 }
 
-.intro .text span {
+.intro .intro-text span {
   display: block;
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
   font-size: clamp(10px, 7.5vw, 90px);
@@ -115,7 +118,7 @@ body {
   text-transform: uppercase;
 }
 
-.intro .text .iam {
+.intro .intro-text .iam {
   color: #6d6d6d;
   display: inline-block;
 }
@@ -405,4 +408,53 @@ footer {
     -webkit-transform: translate(-33.33%, 0);
             transform: translate(-33.33%, 0);
   }
+}
+
+.welcome-container {
+  height: calc(1000px + 100vh);
+  position: relative;
+  top: 0;
+  bottom: 0;
+  z-index: 11;
+  background-color: white;
+}
+
+.main-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.welcome {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+}
+
+.box {
+  height: 50%;
+  overflow: hidden;
+  background-color: white;
+}
+
+.welcome-text {
+  font-size: clamp(50px, 15vw, 150px);
+  text-transform: uppercase;
+  text-align: center;
+  color: black;
+}
+
+.top-text {
+  position: relative;
+  top: 100%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.bottom-text {
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
