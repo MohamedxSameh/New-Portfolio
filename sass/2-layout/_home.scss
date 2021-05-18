@@ -1,0 +1,137 @@
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $bg-color;
+  color: white;
+}
+.container {
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5vw;
+  // width: Min(fit-content, 1349px);
+  width: fit-content;
+  max-width: 1349px;
+}
+
+// INTRODUCTION
+.intro {
+  margin-top: 15vh;
+  width: fit-content;
+  .text {
+    span {
+      display: block;
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      font-size: clamp(10px, 7.5vw, 90px);
+      font-weight: 800;
+      line-height: Min(9vw, 110px);
+      text-transform: uppercase;
+    }
+    .iam {
+      color: $text-color-2;
+      display: inline-block;
+    }
+  }
+}
+
+// INFORMATION list
+.info-list {
+  margin-top: $space-height;
+  width: fit-content;
+  .location,
+  .status {
+    align-items: center;
+    display: flex;
+    padding: 10px 0;
+  }
+  .pin-icon {
+    width: 15px;
+    height: auto;
+    fill: $text-color-2;
+  }
+  .circle {
+    background-color: #1cb31c;
+    border-radius: 100%;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    animation: circle 4s linear infinite;
+    box-shadow: 1px 1px 6px #1cb31c, -1px -2px 6px #1cb31c;
+  }
+  .text {
+    text-transform: capitalize;
+    margin-left: 15px;
+    font-size: 1.6rem;
+  }
+}
+@keyframes circle {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+// INFORMATION
+.info {
+  margin-top: $space-height;
+  width: Min(100%, 650px);
+  .text {
+    font-size: 1.7rem;
+    line-height: 1.5;
+    padding: 10px 0;
+    text-transform: uppercase;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .info-list {
+    .pin-icon {
+      width: 20px;
+    }
+    .circle {
+      width: 18px;
+      height: 18px;
+    }
+    .text {
+      font-size: 2rem;
+    }
+  }
+  .info .text {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .info-list {
+    margin-top: 10vh;
+    .pin-icon {
+      width: 25px;
+    }
+    .circle {
+      width: 24px;
+      height: 24px;
+    }
+    .text {
+      font-size: 2.5rem;
+    }
+  }
+  .info {
+    align-self: flex-end;
+    margin-top: 10vh;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .intro .text span {
+    font-size: clamp(10px, 7.5vw, 115px);
+    font-weight: 900;
+  }
+}
