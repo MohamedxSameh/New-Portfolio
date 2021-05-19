@@ -46,6 +46,7 @@ let scroll = () => {
       element.style.transform = `translate3d(0,${rate}%,0)`;
       welcomeContainer.style.display = 'none';
       clearInterval(changeHello);
+      // // window.removeEventListener('scrol', scrol);
     }
   });
 };
