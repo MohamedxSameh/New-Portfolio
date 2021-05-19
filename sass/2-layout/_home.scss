@@ -27,10 +27,10 @@ body {
   .intro-text {
     span {
       display: block;
-      font-family: 'Poppins', Arial, Helvetica, sans-serif;
-      font-size: clamp(10px, 7.5vw, 90px);
-      font-weight: 800;
-      line-height: Min(9vw, 110px);
+      font-family: 'Poppins', 'Montserrat', Helvetica, sans-serif;
+      font-size: clamp(10px, 7vw, 90px);
+      font-weight: 900;
+      line-height: Min(9.5vw, 110px);
       text-transform: uppercase;
     }
     .iam {
@@ -62,12 +62,12 @@ body {
     width: 18px;
     height: 18px;
     animation: circle 4s linear infinite;
-    box-shadow: 0 0 8px 1px $circle-green;
+    box-shadow: 0 0 8px 2px $circle-green;
   }
   .text {
     text-transform: capitalize;
     margin-left: 15px;
-    font-size: 1.6rem;
+    font-size: 1.9rem;
   }
 }
 @keyframes circle {
@@ -75,7 +75,7 @@ body {
     transform: scale(0.9);
   }
   50% {
-    transform: scale(0.7);
+    transform: scale(0.6);
   }
   100% {
     transform: scale(0.9);
@@ -87,9 +87,9 @@ body {
   margin-top: $space-height;
   width: Min(100%, 650px);
   .text {
-    font-size: 1.7rem;
+    font-size: 2rem;
     line-height: 1.5;
-    padding: 10px 0;
+    padding: 15px 0;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
   }
@@ -139,6 +139,5 @@ body {
   }
   .intro .text span {
     font-size: clamp(10px, 7.5vw, 115px);
-    font-weight: 900;
   }
 }

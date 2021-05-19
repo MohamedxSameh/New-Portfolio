@@ -1,23 +1,22 @@
 footer {
   width: 100%;
   overflow: hidden;
-  margin-top: 10vh;
+  margin: 10vh 0 5vh;
 }
 .marquee-container {
   animation: footerMarquee 8s linear infinite;
   display: flex;
-  margin-bottom: 10px;
   width: fit-content;
   .footer-marquee {
     display: flex;
     li {
       color: white;
       font-family: 'Montserrat', sans-serif;
-      font-size: clamp(45px, 8vw, 100px);
+      font-size: clamp(50px, 8vw, 100px);
       font-style: italic;
       font-weight: 700;
       letter-spacing: 2px;
-      padding: 2vw;
+      padding: 3vw;
       text-transform: uppercase;
       -webkit-text-fill-color: transparent;
       -webkit-text-stroke: 1px white;
