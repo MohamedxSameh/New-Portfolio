@@ -5,6 +5,7 @@
   bottom: 0;
   z-index: 11;
   background-color: white;
+  // display: none;
 }
 .main-text {
   position: absolute;
@@ -12,6 +13,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+  letter-spacing: 1px;
+  font-family: 'Oswald';
 }
 .welcome {
   height: 100vh;
@@ -24,10 +27,12 @@
   background-color: white;
 }
 .welcome-text {
-  font-size: clamp(50px, 15vw, 150px);
+  font-size: clamp(55px, 22vw, 150px);
   text-transform: uppercase;
   text-align: center;
   color: black;
+  letter-spacing: 1px;
+  font-family: 'Oswald', sans-serif;
 }
 .top-text {
   position: relative;

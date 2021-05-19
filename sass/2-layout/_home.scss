@@ -1,10 +1,8 @@
 body {
-  // width: 100%;
-  // min-height: 100vh;
   background-color: $bg-color;
   color: white;
 }
-.container {
+.page-container {
   width: 100vw;
   position: fixed;
   top: 0;
@@ -53,18 +51,18 @@ body {
     padding: 10px 0;
   }
   .pin-icon {
-    width: 15px;
+    width: 20px;
     height: auto;
-    fill: $text-color-2;
+    fill: #ff3636;
   }
   .circle {
-    background-color: #1cb31c;
+    background-color: $circle-green;
     border-radius: 100%;
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 18px;
+    height: 18px;
     animation: circle 4s linear infinite;
-    box-shadow: 1px 1px 6px #1cb31c, -1px -2px 6px #1cb31c;
+    box-shadow: 0 0 8px 1px $circle-green;
   }
   .text {
     text-transform: capitalize;
@@ -93,17 +91,18 @@ body {
     line-height: 1.5;
     padding: 10px 0;
     text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .info-list {
     .pin-icon {
-      width: 20px;
+      width: 24px;
     }
     .circle {
-      width: 18px;
-      height: 18px;
+      width: 22px;
+      height: 22px;
     }
     .text {
       font-size: 2rem;
@@ -134,7 +133,10 @@ body {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1400px) {
+  .main {
+    margin: 0 auto;
+  }
   .intro .text span {
     font-size: clamp(10px, 7.5vw, 115px);
     font-weight: 900;

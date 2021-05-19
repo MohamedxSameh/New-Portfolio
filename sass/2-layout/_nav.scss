@@ -1,0 +1,123 @@
+// NAV MENU
+.nav-menu {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 99;
+  // opacity: 0;
+  transition: opacity 0s 0.5s;
+}
+.nav-menu-close {
+  display: none;
+}
+.nav-menu-open {
+  // opacity: 1;
+  transition: opacity 0s;
+  background-color: white;
+  transition: background-color 0s 0.5s;
+}
+.nav-menu-open {
+  & .box1,
+  & .box2,
+  & .box3,
+  & .box4 {
+    transform: translate(0);
+  }
+}
+.nav-boxes-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.nav-box {
+  width: 50%;
+  height: 50%;
+  background-color: white;
+}
+.box1 {
+  position: relative;
+  transform: translate(0, -100%);
+  transition: all 0.4s linear;
+}
+.box2 {
+  position: relative;
+  transform: translate(100%, 0);
+  transition: all 0.4s linear;
+}
+.box3 {
+  position: relative;
+  transform: translate(-100%, 0);
+  transition: all 0.4s linear;
+}
+.box4 {
+  position: relative;
+  transform: translate(0, 100%);
+  transition: all 0.4s linear;
+}
+
+// NAV ITEMS
+.menu {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: $header-height 0;
+  overflow-y: scroll;
+  display: none;
+}
+
+.menu-item {
+  margin-top: Min(4vh, 80px);
+  padding-left: 5vw;
+  overflow: hidden;
+}
+.marquee {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+.marquee::before,
+.marquee-item {
+  font-size: clamp(60px, 10vw, 115px);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: 'Oswald', Arial, Helvetica, sans-serif;
+  color: black;
+  padding: 0 4vw;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+.marquee[data-menuItem]::before {
+  content: attr(data-menuItem);
+}
+.marquee-item {
+  display: none;
+}
+
+@keyframes marquee {
+  to {
+    transform: translate3d(-16.66%, 0, 0);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .marquee:hover {
+    animation: marquee 2s linear infinite;
+    cursor: pointer;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 3px black;
+    .marquee-item {
+      display: block;
+      font-family: 'Oswald';
+    }
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .marquee::before,
+  .marquee-item {
+    letter-spacing: 5px;
+  }
+}

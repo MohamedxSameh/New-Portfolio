@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./sass/main.css" />
     <title>Mohamed Sameh | Portfolio</title>
   </head>
@@ -21,7 +27,7 @@
       </div>
     </div>
     <!-- HOME PAGE -->
-    <div class="container">
+    <div class="page-container">
       <header class="header">
         <div class="icon">
           <span class="bar bar1"></span>
@@ -30,6 +36,54 @@
           <span class="bar bar4"></span>
         </div>
       </header>
+      <!-- NAV MENU -->
+      <nav class="nav-menu nav-menu-close">
+        <div class="nav-boxes-container">
+          <div class="nav-box box1"></div>
+          <div class="nav-box box2"></div>
+          <div class="nav-box box3"></div>
+          <div class="nav-box box4"></div>
+        </div>
+        <ul class="menu">
+          <li class="menu-item">
+            <div data-menuItem="home" class="marquee">
+              <span class="marquee-item">home</span>
+              <span class="marquee-item">home</span>
+              <span class="marquee-item">home</span>
+              <span class="marquee-item">home</span>
+              <span class="marquee-item">home</span>
+            </div>
+          </li>
+          <li class="menu-item">
+            <div data-menuItem="projects" class="marquee">
+              <span class="marquee-item">projects</span>
+              <span class="marquee-item">projects</span>
+              <span class="marquee-item">projects</span>
+              <span class="marquee-item">projects</span>
+              <span class="marquee-item">projects</span>
+            </div>
+          </li>
+          <li class="menu-item">
+            <div data-menuItem="about" class="marquee">
+              <span class="marquee-item">about</span>
+              <span class="marquee-item">about</span>
+              <span class="marquee-item">about</span>
+              <span class="marquee-item">about</span>
+              <span class="marquee-item">about</span>
+            </div>
+          </li>
+          <li class="menu-item">
+            <div data-menuItem="contact" class="marquee">
+              <span class="marquee-item">contact</span>
+              <span class="marquee-item">contact</span>
+              <span class="marquee-item">contact</span>
+              <span class="marquee-item">contact</span>
+              <span class="marquee-item">contact</span>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <!-- MAIN CONTENT -->
       <main class="main">
         <div class="intro">
           <h1 class="intro-text">
@@ -42,14 +96,15 @@
           <div class="location">
             <svg
               width="30"
-              height="39"
-              viewBox="0 0 30 39"
-              fill="white"
+              height="40"
+              viewBox="0 0 30 40"
               xmlns="http://www.w3.org/2000/svg"
               class="pin-icon"
             >
               <path
-                d="M13.4584 38.2131C2.10703 22.1684 0 20.5217 0 14.625C0 6.54781 6.7157 0 15 0C23.2843 0 30 6.54781 30 14.625C30 20.5217 27.893 22.1684 16.5416 38.2131C15.7966 39.2623 14.2033 39.2623 13.4584 38.2131Z"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8.22668 31.6885C9.70361 33.7925 11.4341 36.2578 13.4585 39.1929C14.2032 40.269 15.7966 40.269 16.5415 39.1929C18.5659 36.2578 20.2964 33.7925 21.7733 31.6885C28.5774 21.9956 30 19.9692 30 15C30 6.71582 23.2843 0 15 0C6.7157 0 0 6.71582 0 15C0 19.9692 1.42261 21.9956 8.22668 31.6885ZM15 22C18.866 22 22 18.8662 22 15C22 11.1338 18.866 8 15 8C11.134 8 8 11.1338 8 15C8 18.8662 11.134 22 15 22Z"
               />
             </svg>
             <span class="text">based in cairo, egypt</span>
@@ -73,19 +128,19 @@
       </main>
       <footer>
         <div class="marquee-container">
-          <ul class="marquee">
+          <ul class="footer-marquee">
             <li>home</li>
             <li>projects</li>
             <li>about</li>
             <li>contact</li>
           </ul>
-          <ul class="marquee">
+          <ul class="footer-marquee">
             <li>home</li>
             <li>projects</li>
             <li>about</li>
             <li>contact</li>
           </ul>
-          <ul class="marquee">
+          <ul class="footer-marquee">
             <li>home</li>
             <li>projects</li>
             <li>about</li>
