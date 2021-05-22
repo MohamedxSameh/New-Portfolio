@@ -189,15 +189,28 @@
     font-family: 'Oswald';
     font-size: 100px;
   }
+  // GRID CONTAINER
+  .grid-container {
+    width: 100%;
+    max-width: 1800px;
+    // margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    overflow: hidden;
+  }
   // WHO SECTION
   .who-section {
+    width: 100%;
+    margin: 0;
+    margin-top: Min(100px, 10vh);
+    grid-column: 1/3;
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    width: fit-content;
-    gap: 6%;
-    margin: 4vh auto;
+    grid-template-columns: fit-content(900px) 1fr;
     .who-section-title {
-      align-self: center;
+      grid-column: 2/3;
+      justify-self: center;
+      // align-self: center;
+      margin-right: 5vw;
       .who-title {
         text-align: center;
         font-size: clamp(100px, 14vw, 200px);
@@ -208,21 +221,38 @@
       }
     }
     .who-section-content {
-      padding: 0;
-      justify-self: center;
+      padding: 0 5vw;
+      grid-row: 1/2;
+      width: fit-content;
+      margin-top: 0;
+      // justify-self: center;
+
       .who-info {
         max-width: 650px;
       }
     }
   }
   // SKILL SECTION
-  .skills-section-title {
-    .skills-title {
-      text-align: center;
+  .skills-section {
+    grid-column: 1/3;
+    margin: 0;
+    margin-bottom: 5vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // gap: ;
+    .skills-section-title {
+      padding-left: 5vw;
+      width: 100%;
+      align-self: center;
+      justify-self: flex-start;
+      .skills-title {
+        text-align: start;
+      }
     }
   }
   .skills-list {
-    width: Min(80%, 900px);
+    width: Min(100%, 800px);
     .skill-item-image {
       width: 120px;
     }

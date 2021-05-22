@@ -10,6 +10,7 @@ footer {
   .footer-marquee {
     display: flex;
     li a {
+      width: 100%;
       color: white;
       font-family: 'Montserrat', sans-serif;
       font-size: clamp(50px, 8vw, 100px);
@@ -33,7 +34,7 @@ footer {
     transform: translate(0, 0);
   }
   to {
-    transform: translate(-33.33%, 0);
+    transform: translate(-50%, 0);
   }
 }
 

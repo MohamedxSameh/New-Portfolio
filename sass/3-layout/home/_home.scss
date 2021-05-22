@@ -24,13 +24,14 @@ body {
 .intro {
   margin-top: 15vh;
   width: fit-content;
+  margin-left: 2vw;
   .intro-text {
     span {
       display: block;
       font-family: 'Oswald', 'Montserrat', Helvetica, sans-serif;
-      font-size: clamp(10px, 9.3vw, 110px);
+      font-size: clamp(10px, 9.5vw, 110px);
       font-weight: 900;
-      line-height: Min(12vw, 130px);
+      line-height: Min(12vw, 160px);
       text-transform: uppercase;
     }
     .iam {
@@ -96,6 +97,12 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
+  .intro {
+    margin-left: 5vw;
+    .into-text span {
+      font-size: clamp(10px, 9vw, 110px);
+    }
+  }
   .info-list {
     .pin-icon {
       width: 24px;
@@ -137,7 +144,7 @@ body {
   .main {
     margin: 0 auto;
   }
-  .intro .text span {
-    font-size: clamp(10px, 7.5vw, 115px);
+  .intro .intro-text span {
+    font-size: clamp(10px, 8vw, 150px);
   }
 }

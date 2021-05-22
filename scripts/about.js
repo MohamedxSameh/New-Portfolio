@@ -10,6 +10,9 @@ const scroll = () => {
   if (innerWidth < 1024) {
     if (pageYOffset < 300) {
       let opacityRate = 1 / 300;
+      let rotateRate = (pageYOffset * 360) / 300;
+      console.log(rotateRate);
+      text.style.transform = `translate(0, calc(50vh - 50%)) rotate(${rotateRate}deg)`;
       let opacity = 1 - pageYOffset * opacityRate;
       text.style.opacity = `${opacity}`;
     } else {
