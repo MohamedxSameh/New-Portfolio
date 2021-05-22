@@ -1,0 +1,230 @@
+.page-title-wrapper {
+  height: calc(100vh + 300px);
+  .page-title {
+    position: fixed;
+    width: 100%;
+    font-family: 'Oswald';
+    transform: translate(0, calc(50vh - 50%));
+    text-align: center;
+    text-transform: uppercase;
+    font-size: clamp(30px, 30vw, 250px);
+    line-height: 1;
+  }
+}
+.about {
+  padding-top: $header-height;
+}
+.about-title {
+  display: none;
+}
+// WHO SECTION
+.who-section-title {
+  .who-title,
+  span {
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: clamp(90px, 30vw, 150px);
+    text-align: center;
+    line-height: 1;
+    color: #f30072;
+  }
+  span {
+    display: block;
+    font-size: clamp(30px, 18vw, 90px);
+  }
+}
+
+.who-section-content {
+  margin-top: 6vh;
+  padding: 0 16px;
+}
+.who-info {
+  max-width: 600px;
+  .info-text {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1.7;
+  }
+}
+.who-info-list {
+  margin-top: 6vh;
+  .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .item-text {
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    margin-left: 20px;
+  }
+  .info-icon,
+  .circle-icon {
+    width: 35px;
+    text-align: center;
+  }
+  .grad-icon {
+    width: 35px;
+    height: auto;
+  }
+  .pin-icon {
+    width: 25px;
+    height: auto;
+  }
+  .circle-icon {
+    height: 20px;
+  }
+  .circle-icon::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: rgb(0, 199, 0);
+    box-shadow: 0 0 8px 1px rgb(0, 199, 0);
+  }
+}
+
+// SKILLS SECTION
+.skills-section {
+  margin-top: 6vh;
+}
+
+.skills-title {
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: clamp(70px, 20vw, 100px);
+  text-align: center;
+  line-height: 1;
+  color: rgb(255, 0, 85);
+}
+.skills-section-content {
+  margin-top: 30px;
+}
+.skill-item {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &-image {
+    width: 80px;
+    margin-top: 10px;
+  }
+  &-title {
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    font-weight: 600;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  // WHO SECTION
+  .who-section {
+    margin: 0 5vw;
+    .who-section-title {
+      .who-title {
+        font-size: 120px;
+        text-align: end;
+      }
+      span {
+        font-size: 80px;
+        text-align: end;
+      }
+    }
+    .who-section-content {
+      margin-top: 4vh;
+      .info-text {
+        font-size: 2.2rem;
+        line-height: 1.8;
+      }
+    }
+    .who-info-list {
+      .item-text {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  // SKILLS SECTION
+  .skills-section {
+    margin: 6vh 5vw;
+  }
+  .skills-section-title {
+    .skills-title {
+      font-size: clamp(80px, 10vw, 120px);
+      text-align: end;
+    }
+  }
+  .skills-section-content {
+    margin-top: 5vh;
+  }
+  .skills-list {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 50px;
+    width: Min(90%, 700px);
+    margin: 0 auto;
+    .skill-item {
+      margin-bottom: 0;
+    }
+  }
+  .skill-item-image {
+    width: 100px;
+  }
+}
+
+@media only screen and(min-width:1024px) {
+  .page-title-wrapper {
+    height: calc(100vh + 400px);
+  }
+  .about-title {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+    font-family: 'Oswald';
+    font-size: 100px;
+  }
+  // WHO SECTION
+  .who-section {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    width: fit-content;
+    gap: 6%;
+    margin: 4vh auto;
+    .who-section-title {
+      align-self: center;
+      .who-title {
+        text-align: center;
+        font-size: clamp(100px, 14vw, 200px);
+        span {
+          text-align: center;
+          font-size: clamp(80px, 10vw, 120px);
+        }
+      }
+    }
+    .who-section-content {
+      padding: 0;
+      justify-self: center;
+      .who-info {
+        max-width: 650px;
+      }
+    }
+  }
+  // SKILL SECTION
+  .skills-section-title {
+    .skills-title {
+      text-align: center;
+    }
+  }
+  .skills-list {
+    width: Min(80%, 900px);
+    .skill-item-image {
+      width: 120px;
+    }
+  }
+}

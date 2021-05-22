@@ -9,7 +9,7 @@ footer {
   width: fit-content;
   .footer-marquee {
     display: flex;
-    li {
+    li a {
       color: white;
       font-family: 'Montserrat', sans-serif;
       font-size: clamp(50px, 8vw, 100px);
