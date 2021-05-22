@@ -20,24 +20,34 @@ let changeHello = setInterval(() => {
 
 // MOVING WELCOME PAGE ON SCROLL
 let scroll = () => {
-  if (pageYOffset > 0) {
-    mainText.style.display = 'none';
-    welcomeContainer.style.backgroundColor = 'transparent';
-  } else {
-    mainText.style.display = 'block';
-    welcomeContainer.style.backgroundColor = 'white';
-  }
-  boxes.forEach((element, index) => {
-    let rate = element.dataset.rate * pageYOffset;
-    if (-100 < rate && rate < 100) {
-      element.style.transform = `translate3d(0,${rate}%,0)`;
-    } else {
-      rate = index === 0 ? '-100' : '100';
-      element.style.transform = `translate3d(0,${rate}%,0)`;
+  if (innerWidth < 900) {
+    let rotateRate = 9 / 100;
+    let rotate = 90 - pageYOffset * rotateRate;
+    mainText.style.transform = `translate(-50%, -50%) rotate(${rotate}deg)`;
+    if (pageYOffset > 950) {
       welcomeContainer.style.display = 'none';
       pageContainer.style.display = 'block';
-      clearInterval(changeHello);
     }
-  });
+  } else {
+    if (pageYOffset > 0) {
+      mainText.style.display = 'none';
+      welcomeContainer.style.backgroundColor = 'transparent';
+    } else {
+      mainText.style.display = 'block';
+      welcomeContainer.style.backgroundColor = 'black';
+    }
+    boxes.forEach((element, index) => {
+      let rate = element.dataset.rate * pageYOffset;
+      if (-100 < rate && rate < 100) {
+        element.style.transform = `translate3d(0,${rate}%,0)`;
+      } else {
+        rate = index === 0 ? '-100' : '100';
+        element.style.transform = `translate3d(0,${rate}%,0)`;
+        welcomeContainer.style.display = 'none';
+        pageContainer.style.display = 'block';
+        clearInterval(changeHello);
+      }
+    });
+  }
 };
 window.addEventListener('scroll', scroll);

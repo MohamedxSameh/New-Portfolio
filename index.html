@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preload" as="font" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;600;700;800&display=swap"
       rel="stylesheet"
@@ -14,10 +14,10 @@
   </head>
   <body>
     <!-- WELCOME PAGE -->
-    <div class="welcome-container">
+    <div class="welcome-container no-select">
       <h1 class="welcome-scroll-text">"Scroll down to start"</h1>
+      <h1 class="main-text welcome-text">hello</h1>
       <div class="welcome">
-        <h1 class="welcome-text main-text">hello</h1>
         <div data-rate="-0.1" class="box top-box">
           <h1 class="welcome-text top-text">hello</h1>
         </div>
@@ -44,7 +44,7 @@
           <div class="nav-box box3"></div>
           <div class="nav-box box4"></div>
         </div>
-        <ul class="menu">
+        <ul class="menu no-select">
           <li class="menu-item">
             <a href="./index.html">
               <div data-menuItem="home" class="marquee">
@@ -88,7 +88,7 @@
         </ul>
       </nav>
       <!-- MAIN CONTENT -->
-      <div class="intro">
+      <div class="intro no-select">
         <h1 class="intro-text">
           <span><span class="iam">i'm</span> mohamed sameh.</span>
           <span> <span class="iam">creative</span> front-end</span>
@@ -131,7 +131,7 @@
         </div>
       </main>
       <footer>
-        <div class="marquee-container">
+        <div class="marquee-container no-select">
           <ul class="footer-marquee">
             <li><a href="./index.html">home</a></li>
             <li><a href="./projects.html">project</a></li>

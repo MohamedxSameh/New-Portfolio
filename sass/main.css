@@ -73,6 +73,21 @@ span {
   font-family: 'Montserrat', sans-serif;
 }
 
+.no-select {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
 .header {
   height: 64px;
   width: 100%;
@@ -340,7 +355,7 @@ span {
 footer {
   width: 100%;
   overflow: hidden;
-  margin: 10vh 0 5vh;
+  margin: 9vh 0 6vh;
 }
 
 .marquee-container {
@@ -364,7 +379,7 @@ footer {
   width: 100%;
   color: white;
   font-family: 'Montserrat', sans-serif;
-  font-size: clamp(50px, 8vw, 100px);
+  font-size: clamp(50px, 15vw, 100px);
   font-style: italic;
   font-weight: 700;
   letter-spacing: 2px;
@@ -429,7 +444,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 5vw;
+  margin: 0 4vw;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -437,7 +452,7 @@ body {
 }
 
 .intro {
-  margin-top: 15vh;
+  margin-top: 10vh;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -447,8 +462,8 @@ body {
 .intro .intro-text span {
   display: block;
   font-family: 'Oswald', 'Montserrat', Helvetica, sans-serif;
-  font-size: clamp(10px, 9.5vw, 110px);
-  font-weight: 900;
+  font-size: clamp(10px, 9.8vw, 110px);
+  font-weight: 800;
   line-height: Min(12vw, 160px);
   text-transform: uppercase;
 }
@@ -531,7 +546,7 @@ body {
 }
 
 .info {
-  margin-top: 6vh;
+  margin-top: 3vh;
   width: Min(100%, 650px);
 }
 
@@ -541,14 +556,16 @@ body {
   padding: 15px 0;
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
 
 @media only screen and (min-width: 768px) {
   .intro {
     margin-left: 5vw;
   }
-  .intro .into-text span {
-    font-size: clamp(10px, 9vw, 110px);
+  .intro .intro-text span {
+    font-size: clamp(10px, 8vw, 110px);
+    line-height: Min(9vw, 160px);
   }
   .info-list .pin-icon {
     width: 24px;
@@ -566,6 +583,12 @@ body {
 }
 
 @media only screen and (min-width: 1024px) {
+  .intro {
+    margin-top: 15vh;
+  }
+  .info {
+    margin-top: 6vh;
+  }
   .info-list {
     margin-top: 10vh;
   }
@@ -601,51 +624,52 @@ body {
   top: 0;
   bottom: 0;
   z-index: 11;
-  background-color: white;
-  display: none;
+  background-color: black;
+  color: white;
 }
 
 .welcome-scroll-text {
   font-size: 2rem;
   color: #6d6d6d;
-  position: absolute;
+  position: fixed;
   top: 30px;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
   z-index: 2;
   -webkit-animation: scrollTextAnim 1s linear 3;
           animation: scrollTextAnim 1s linear 3;
+  width: 100%;
+  text-align: center;
 }
 
 .main-text {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%) rotate(90deg);
+          transform: translate(-50%, -50%) rotate(90deg);
   z-index: 2;
   letter-spacing: 1px;
   font-family: 'Oswald';
+  font-size: 16vh;
 }
 
 .welcome {
   height: 100vh;
   width: 100%;
   position: fixed;
+  display: none;
 }
 
 .box {
   height: 50%;
   overflow: hidden;
-  background-color: white;
+  background-color: black;
 }
 
 .welcome-text {
   font-size: clamp(55px, 22vw, 150px);
   text-transform: uppercase;
   text-align: center;
-  color: black;
+  color: white;
   letter-spacing: 1px;
   font-family: 'Oswald', sans-serif;
 }
@@ -688,6 +712,14 @@ body {
 
 @media only screen and (min-width: 900px) {
   .welcome-container {
+    display: block;
+  }
+  .main-text {
+    font-size: clamp(55px, 22vw, 150px);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .welcome {
     display: block;
   }
 }

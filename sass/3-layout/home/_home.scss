@@ -14,7 +14,7 @@ body {
 .main {
   display: flex;
   flex-direction: column;
-  margin: 0 5vw;
+  margin: 0 4vw;
   // width: Min(fit-content, 1349px);
   width: fit-content;
   max-width: 1349px;
@@ -22,15 +22,15 @@ body {
 
 // INTRODUCTION
 .intro {
-  margin-top: 15vh;
+  margin-top: 10vh;
   width: fit-content;
   margin-left: 2vw;
   .intro-text {
     span {
       display: block;
       font-family: 'Oswald', 'Montserrat', Helvetica, sans-serif;
-      font-size: clamp(10px, 9.5vw, 110px);
-      font-weight: 900;
+      font-size: clamp(10px, 9.8vw, 110px);
+      font-weight: 800;
       line-height: Min(12vw, 160px);
       text-transform: uppercase;
     }
@@ -85,7 +85,7 @@ body {
 
 // INFORMATION
 .info {
-  margin-top: $space-height;
+  margin-top: 3vh;
   width: Min(100%, 650px);
   .text {
     font-size: 2rem;
@@ -93,15 +93,19 @@ body {
     padding: 15px 0;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .intro {
     margin-left: 5vw;
-    .into-text span {
-      font-size: clamp(10px, 9vw, 110px);
+    .intro-text span {
+      font-size: clamp(10px, 8vw, 110px);
+      line-height: Min(9vw, 160px);
     }
+  }
+  .info {
   }
   .info-list {
     .pin-icon {
@@ -121,6 +125,12 @@ body {
 }
 
 @media only screen and (min-width: 1024px) {
+  .intro {
+    margin-top: 15vh;
+  }
+  .info {
+    margin-top: $space-height;
+  }
   .info-list {
     margin-top: 10vh;
     .pin-icon {

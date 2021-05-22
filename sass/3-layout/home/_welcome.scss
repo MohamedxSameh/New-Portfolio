@@ -4,43 +4,45 @@
   top: 0;
   bottom: 0;
   z-index: 11;
-  background-color: white;
-  display: none;
+  background-color: black;
+  color: white;
 }
 .welcome-scroll-text {
   font-size: 2rem;
   color: $text-color-2;
-  position: absolute;
+  position: fixed;
   top: 30px;
-  left: 50%;
-  transform: translate(-50%, 0);
   z-index: 2;
   animation: scrollTextAnim 1s linear 3;
+  width: 100%;
+  text-align: center;
 }
 .main-text {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(90deg);
   z-index: 2;
   letter-spacing: 1px;
   font-family: 'Oswald';
+  font-size: 16vh;
 }
 .welcome {
   height: 100vh;
   width: 100%;
   position: fixed;
+  display: none;
 }
 .box {
   height: 50%;
   overflow: hidden;
-  background-color: white;
+  background-color: black;
 }
 .welcome-text {
   font-size: clamp(55px, 22vw, 150px);
   text-transform: uppercase;
   text-align: center;
-  color: black;
+  color: white;
   letter-spacing: 1px;
   font-family: 'Oswald', sans-serif;
 }
@@ -66,6 +68,13 @@
 }
 @media only screen and (min-width: 900px) {
   .welcome-container {
+    display: block;
+  }
+  .main-text {
+    font-size: clamp(55px, 22vw, 150px);
+    transform: translate(-50%, -50%);
+  }
+  .welcome {
     display: block;
   }
 }
