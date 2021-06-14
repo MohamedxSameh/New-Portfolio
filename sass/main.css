@@ -1020,3 +1020,177 @@ body {
     width: 120px;
   }
 }
+
+.contact-page {
+  padding-top: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.svg-text {
+  display: none;
+}
+
+.header-text {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-size: clamp(50px, 9vw, 120px);
+  color: #707070;
+  line-height: 1;
+  letter-spacing: 1.5px;
+}
+
+.title-text {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: clamp(35px, 8vw, 120px);
+  margin-top: 20px;
+  letter-spacing: 1.5px;
+}
+
+.contact-btn {
+  background-color: #ff0055;
+  padding: 6px 0;
+  max-width: 150px;
+  width: 50vw;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  margin-top: 15px;
+  display: block;
+}
+
+.contact-mail {
+  margin: 40px 0;
+}
+
+.contact-mail .mail-title {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #707070;
+}
+
+.contact-mail .mail {
+  margin-top: 10px;
+}
+
+.contact-social {
+  width: 50vw;
+  max-width: 150px;
+}
+
+.contact-social .social-title {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #707070;
+}
+
+.contact-social .social-list {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact-social .social-list img {
+  width: 30px;
+}
+
+.contact-footer {
+  position: absolute;
+  bottom: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .title-text {
+    margin-top: 30px;
+  }
+  .contact-btn {
+    max-width: 200px;
+    padding: 9px 0;
+    font-size: 2rem;
+  }
+  .contact-mail .mail-title {
+    font-size: 2rem;
+  }
+  .contact-mail .mail {
+    margin-top: 15px;
+    font-size: 1.8rem;
+  }
+  .contact-social {
+    max-width: 180px;
+  }
+  .contact-social .social-title {
+    font-size: 2rem;
+  }
+  .contact-social .social-list {
+    margin-top: 25px;
+  }
+  .contact-social .social-list img {
+    width: 35px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .header-text {
+    display: none;
+  }
+  .svg-text {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    width: 100px;
+    z-index: 1;
+  }
+  .contact-btn {
+    padding: 10px 0;
+    max-width: 220px;
+    font-size: 2.2rem;
+    margin-top: 25px;
+  }
+  .contact-btn:hover {
+    cursor: pointer;
+    border-radius: 8px;
+    color: white;
+  }
+  .contact-mail {
+    margin: 50px;
+  }
+  .contact-mail .mail-title {
+    font-size: 2.4rem;
+  }
+  .contact-mail .mail {
+    font-size: 2rem;
+  }
+  .contact-social {
+    max-width: 220px;
+  }
+  .contact-social .social-title {
+    font-size: 2.4rem;
+  }
+  .contact-social .social-list img {
+    width: 40px;
+  }
+  .contact-social .social-list img:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+/*# sourceMappingURL=main.css.map */

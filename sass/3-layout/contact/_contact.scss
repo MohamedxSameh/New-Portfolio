@@ -1,0 +1,151 @@
+.contact-page {
+  // min-height: 100vh;
+  padding-top: $header-height;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.svg-text {
+  display: none;
+}
+.header-text {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-size: clamp(50px, 9vw, 120px);
+  color: #707070;
+  line-height: 1;
+  letter-spacing: 1.5px;
+}
+.title-text {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: clamp(35px, 8vw, 120px);
+  margin-top: 20px;
+  letter-spacing: 1.5px;
+}
+.contact-btn {
+  background-color: #ff0055;
+  padding: 6px 0;
+  max-width: 150px;
+  width: 50vw;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  // margin: 15px auto 0;
+  margin-top: 15px;
+  display: block;
+}
+.contact-mail {
+  margin: 40px 0;
+  .mail-title {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #707070;
+  }
+  .mail {
+    margin-top: 10px;
+  }
+}
+.contact-social {
+  width: 50vw;
+  max-width: 150px;
+  .social-title {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #707070;
+  }
+  .social-list {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    img {
+      width: 30px;
+    }
+  }
+}
+.contact-footer {
+  position: absolute;
+  bottom: 0;
+}
+
+@media only screen and(min-width:768px) {
+  .title-text {
+    margin-top: 30px;
+  }
+  .contact-btn {
+    max-width: 200px;
+    padding: 9px 0;
+    font-size: 2rem;
+  }
+  .contact-mail {
+    .mail-title {
+      font-size: 2rem;
+    }
+    .mail {
+      margin-top: 15px;
+      font-size: 1.8rem;
+    }
+  }
+  .contact-social {
+    max-width: 180px;
+    .social-title {
+      font-size: 2rem;
+    }
+    .social-list {
+      margin-top: 25px;
+      img {
+        width: 35px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .header-text {
+    display: none;
+  }
+  .svg-text {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(0, -50%);
+    width: 100px;
+    z-index: 1;
+  }
+  .contact-btn {
+    padding: 10px 0;
+    max-width: 220px;
+    font-size: 2.2rem;
+    margin-top: 25px;
+  }
+  .contact-btn:hover {
+    cursor: pointer;
+    border-radius: 8px;
+    color: white;
+  }
+  .contact-mail {
+    margin: 50px;
+    .mail-title {
+      font-size: 2.4rem;
+    }
+    .mail {
+      font-size: 2rem;
+    }
+  }
+  .contact-social {
+    max-width: 220px;
+    .social-title {
+      font-size: 2.4rem;
+    }
+    .social-list img {
+      width: 40px;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
